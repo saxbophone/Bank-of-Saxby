@@ -16,8 +16,6 @@ public class Version {
         Connection con = null;
         Statement st = null;
         ResultSet rs = null;
-
-        Class.forName("org.postgresql.Driver");
     
         String url = "jdbc:postgresql://localhost/joshua";
         String user = "joshua";
