@@ -1,32 +1,12 @@
 package com.saxbophone.bankofsaxby;
 
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JPanel;
-import javax.swing.JButton;
 
-
-public class Pinpad extends JPanel {
-  public Pinpad() {
-    initGui();
-  }
-  private ActionListener actionListener = new ActionListener() {
-    public void actionPerformed(ActionEvent actionEvent) {
-      System.out.println(actionEvent.getActionCommand());
-    }
-  };
-  public void initGui() {
-    setLayout(new GridLayout(5, 3));
-    String[] buttons = { "1", "2", "3",
-                         "4", "5", "6",
-                         "7", "8", "9",
-                         "*", "0", "#",
-                         "Cancel", "Clear", "Enter" };
-    for(String button : buttons) {
-      JButton b = new JButton(button);
-      b.addActionListener(actionListener);
-      add(b);
-    }
-  }
+public interface Pinpad {
+  // Called when the ATM wants to start receiving button presses.
+  public void startCapture();
+  // Called when the ATM wants to stop receiving button presses.
+  public void stopCapture();
+  // Called when any button is pressed on the PIN pad when enabled.
+  // button is String name of the button that was pressed.
+  public void sendButton(String button);
 }
