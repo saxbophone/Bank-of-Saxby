@@ -6,7 +6,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 
 
-public class PinpadTest {
+public class PinpadDemo {
   public static void main(String[] args) {
     JFrame screen = new JFrame("Pinpad Demo");
     screen.setSize(640, 480);
