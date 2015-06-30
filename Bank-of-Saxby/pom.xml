@@ -4,7 +4,7 @@
   <groupId>com.saxbophone.bankofsaxby</groupId>
   <artifactId>Bank-of-Saxby</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.0</version>
+  <version>0.0.1</version>
   <name>Bank-of-Saxby</name>
   <url>https://github.com/saxbophone/Bank-of-Saxby</url>
   <properties>
@@ -52,7 +52,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>com.saxbophone.bankofsaxby.Main</mainClass>
+              <mainClass>com.saxbophone.bankofsaxby.PinpadDemo</mainClass>
             </manifest>
           </archive>
         </configuration>
