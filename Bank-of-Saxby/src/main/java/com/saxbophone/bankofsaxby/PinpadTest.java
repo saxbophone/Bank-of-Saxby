@@ -6,9 +6,9 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 
 
-public class Main {
+public class PinpadTest {
   public static void main(String[] args) {
-    JFrame screen = new JFrame("Bank of Saxby v0.0.0");
+    JFrame screen = new JFrame("Pinpad Demo");
     screen.setSize(640, 480);
     screen.setLayout(new GridLayout());
     screen.addWindowListener(new WindowAdapter() {
@@ -16,6 +16,8 @@ public class Main {
         System.exit(0);
       }
     });
+    Pinpad pad = new Pinpad();
+    screen.add(pad);
     screen.setVisible(true);
   }
 }
