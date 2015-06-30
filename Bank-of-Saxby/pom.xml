@@ -52,7 +52,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>com.saxbophone.bankofsaxby.Main</mainClass>
+              <mainClass>com.saxbophone.bankofsaxby.PinpadDemo</mainClass>
             </manifest>
           </archive>
         </configuration>
