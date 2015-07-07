@@ -9,7 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 
-public class GuiAtmScreen extends JPanel implements Control, Display {
+public class GuiAtmScreen extends JPanel implements Control {
+  private JPanel leftButtons;
+  private JPanel rightButtons;
   public GuiAtmScreen() {
     initGui();
   }
@@ -21,20 +23,25 @@ public class GuiAtmScreen extends JPanel implements Control, Display {
 
   private ActionListener actionListener = new ActionListener() {
     public void actionPerformed(ActionEvent actionEvent) {
-      if(capturing) {
-        sendButton((int)actionEvent.getActionCommand());
-      }
+      sendButton(Integer.parseInt(actionEvent.getActionCommand()));
     }
   };
 
   public void initGui() {
     setLayout(new BorderLayout());
-    GridLayout leftButtons = new GridLayout(3, 1);
-    GridLayout rightButtons = new GridLayout(3, 1);
-    for(String button : buttons) {
-      JButton b = new JButton(button);
-      b.addActionListener(actionListener);
-      add(b);
+    leftButtons = new JPanel(new GridLayout(3, 1));
+    rightButtons = new JPanel(new GridLayout(3, 1));
+    for(int i = 0; i < 3; i++) {
+      JButton l = new JButton();
+      l.addActionListener(actionListener);
+      l.setActionCommand(Integer.toString(i));
+      leftButtons.add(l);
+      JButton r = new JButton();
+      r.addActionListener(actionListener);
+      r.setActionCommand(Integer.toString(i));
+      rightButtons.add(r);
     }
+    add(leftButtons, BorderLayout.LINE_START);
+    add(rightButtons, BorderLayout.LINE_END);
   }
 }
