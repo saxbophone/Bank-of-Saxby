@@ -30,21 +30,25 @@ public class GuiAtmScreen extends JPanel implements Control {
 
   public void initGui() {
     setLayout(new BorderLayout());
-    leftButtons = new JPanel(new GridLayout(4, 1));
-    rightButtons = new JPanel(new GridLayout(4, 1));
-    JLabel lBlank = new JLabel("");
-    leftButtons.add(lBlank);
-    JLabel rBlank = new JLabel("");
-    rightButtons.add(rBlank);
-    for(int i = 0; i < 6; i+=2) {
-      JButton l = new JButton();
-      l.addActionListener(actionListener);
-      l.setActionCommand(Integer.toString(i));
-      leftButtons.add(l);
-      JButton r = new JButton();
-      r.addActionListener(actionListener);
-      r.setActionCommand(Integer.toString(i+1));
-      rightButtons.add(r);
+    leftButtons = new JPanel(new GridLayout(6, 1));
+    rightButtons = new JPanel(new GridLayout(6, 1));
+    for(int i = 0; i < 12; i+=2) {
+      if(i < 6) {
+        JLabel lBlank = new JLabel("");
+        leftButtons.add(lBlank);
+        JLabel rBlank = new JLabel("");
+        rightButtons.add(rBlank);
+      }
+      else {
+        JButton l = new JButton();
+        l.addActionListener(actionListener);
+        l.setActionCommand(Integer.toString(i-6));
+        leftButtons.add(l);
+        JButton r = new JButton();
+        r.addActionListener(actionListener);
+        r.setActionCommand(Integer.toString(i-5));
+        rightButtons.add(r);
+      }
     }
     add(leftButtons, BorderLayout.LINE_START);
     add(rightButtons, BorderLayout.LINE_END);
