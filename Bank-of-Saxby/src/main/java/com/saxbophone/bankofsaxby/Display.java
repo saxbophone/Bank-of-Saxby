@@ -1,4 +1,4 @@
-package com.saxbophone.bankofsaxby.display;
+package com.saxbophone.bankofsaxby;
 
 
 public interface Display {
