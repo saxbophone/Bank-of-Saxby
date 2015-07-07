@@ -1,8 +1,8 @@
 package com.saxbophone.bankofsaxby;
 
-import java.awt.GridLayout;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.GridLayout;
 import javax.swing.JFrame;
 
 
