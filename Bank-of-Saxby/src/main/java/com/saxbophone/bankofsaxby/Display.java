@@ -3,8 +3,6 @@ package com.saxbophone.bankofsaxby.display;
 
 public interface Display {
   // An abstraction of an ATM Screen
-  // initialise the Display:
-  public void init();
   // set header message
   public void setHeader(String message);
   // clear header message

@@ -2,10 +2,6 @@ package com.saxbophone.bankofsaxby;
 
 
 public interface Control {
-  // Called when the ATM wants to start receiving button presses.
-  public void startCapture();
-  // Called when the ATM wants to stop receiving button presses.
-  public void stopCapture();
   // Called when any main screen button is pressed when enabled.
   // button is int number of the button ID that was pressed.
   // (Buttons are numbered left-right descending - there are 6 of them).
