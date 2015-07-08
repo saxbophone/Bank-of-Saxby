@@ -3,6 +3,7 @@ package com.saxbophone.bankofsaxby;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.util.Arrays;
 import javax.swing.JButton;
@@ -11,6 +12,12 @@ import javax.swing.JPanel;
 
 
 public class GuiAtmScreen extends JPanel implements Control {
+  private JPanel screen;
+  private JPanel dialogue;
+  private JLabel header;
+  private JLabel message;
+  private JPanel buttons;
+  private JLabel[] buttonMessage;
   private JPanel leftButtons;
   private JPanel rightButtons;
   public GuiAtmScreen() {
@@ -30,6 +37,23 @@ public class GuiAtmScreen extends JPanel implements Control {
 
   public void initGui() {
     setLayout(new BorderLayout());
+    screen = new JPanel(new GridLayout(2, 1));
+    dialogue = new JPanel(new GridLayout(2, 1));
+    header = new JLabel();
+    header.setText("Ultra Mega Corp Ltd ATM");
+    message = new JLabel();
+    message.setText("This ATM Machine is currently out of service.");
+    dialogue.add(header);
+    dialogue.add(message);
+    screen.add(dialogue);
+    buttons = new JPanel(new GridLayout(3, 2));
+    buttonMessage = new JLabel[6];
+    for(int i = 0; i < 6; i++) {
+      buttonMessage[i] = new JLabel("Sample Button Message");
+      buttons.add(buttonMessage[i]);
+    }
+    screen.add(buttons);
+    add(screen, BorderLayout.CENTER);
     leftButtons = new JPanel(new GridLayout(6, 1));
     rightButtons = new JPanel(new GridLayout(6, 1));
     for(int i = 0; i < 12; i+=2) {
