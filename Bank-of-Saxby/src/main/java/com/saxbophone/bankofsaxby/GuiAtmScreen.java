@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
-public class GuiAtmScreen extends JPanel implements Control {
+public class GuiAtmScreen extends JPanel implements Control, Display {
   private JPanel screen;
   private JPanel dialogue;
   private JLabel header;
@@ -40,16 +40,15 @@ public class GuiAtmScreen extends JPanel implements Control {
     screen = new JPanel(new GridLayout(2, 1));
     dialogue = new JPanel(new GridLayout(2, 1));
     header = new JLabel();
-    header.setText("Ultra Mega Corp Ltd ATM");
+    // header.setMinimumSize(new Dimension(160, 48));
     message = new JLabel();
-    message.setText("This ATM Machine is currently out of service.");
     dialogue.add(header);
     dialogue.add(message);
     screen.add(dialogue);
     buttons = new JPanel(new GridLayout(3, 2));
     buttonMessage = new JLabel[6];
     for(int i = 0; i < 6; i++) {
-      buttonMessage[i] = new JLabel("Sample Button Message");
+      buttonMessage[i] = new JLabel();
       buttons.add(buttonMessage[i]);
     }
     screen.add(buttons);
@@ -58,9 +57,9 @@ public class GuiAtmScreen extends JPanel implements Control {
     rightButtons = new JPanel(new GridLayout(6, 1));
     for(int i = 0; i < 12; i+=2) {
       if(i < 6) {
-        JLabel lBlank = new JLabel("");
+        JLabel lBlank = new JLabel();
         leftButtons.add(lBlank);
-        JLabel rBlank = new JLabel("");
+        JLabel rBlank = new JLabel();
         rightButtons.add(rBlank);
       }
       else {
@@ -76,5 +75,29 @@ public class GuiAtmScreen extends JPanel implements Control {
     }
     add(leftButtons, BorderLayout.LINE_START);
     add(rightButtons, BorderLayout.LINE_END);
+  }
+
+  public void setHeader(String m) {
+    header.setText("<html>" + m + "</html>");
+  }
+
+  public void clearHeader() {
+    header.setText("");
+  }
+
+  public void setMessage(String m) {
+    message.setText("<html>" + m + "</html>");
+  }
+
+  public void clearMessage() {
+    message.setText("");
+  }
+
+  public void setButtonMessage(int b, String m) {
+    buttonMessage[b].setText("<html>" + m + "</html>");
+  }
+
+  public void clearButtonMessage(int b) {
+    buttonMessage[b].setText("");
   }
 }

@@ -17,6 +17,14 @@ public class MachineDemo {
       }
     });
     GuiAtmScreen atm = new GuiAtmScreen();
+    atm.setHeader("Ultra-Mega-Corp Ltd ATM Machine");
+    atm.setMessage("This ATM Machine is currently out of service.");
+    atm.setButtonMessage(0, "This is Button 0");
+    atm.setButtonMessage(1, "This is Button 1");
+    atm.setButtonMessage(2, "This is Button 2");
+    atm.setButtonMessage(3, "This is Button 3");
+    atm.setButtonMessage(4, "This is Button 4");
+    atm.setButtonMessage(5, "This is Button 5");
     GuiPinpad pad = new GuiPinpad();
     screen.add(atm);
     screen.add(pad);

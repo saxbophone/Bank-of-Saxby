@@ -8,7 +8,7 @@ public interface Display {
   // clear header message
   public void clearHeader();
   // set main screen message
-  public void setMessage(String[] lines);
+  public void setMessage(String message);
   // clear main screen message
   public void clearMessage();
   // set the message of a numbered button
