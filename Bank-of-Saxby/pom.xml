@@ -6,7 +6,18 @@
   <packaging>jar</packaging>
   <version>0.0.2</version>
   <name>Bank-of-Saxby</name>
+  <description>
+    A simple, fake Banking System using Java with PostgreSQL. This is for a coursework project.
+  </description>
   <url>https://github.com/saxbophone/Bank-of-Saxby</url>
+  <inceptionYear>2015</inceptionYear>
+  <licenses>
+  </licenses>
+  <organization></organization>
+  <developers>
+  </developers>
+  <contributors>
+  </contributors>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
