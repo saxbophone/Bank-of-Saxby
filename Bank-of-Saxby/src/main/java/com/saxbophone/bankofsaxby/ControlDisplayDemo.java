@@ -6,9 +6,9 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 
 
-public class DisplayDemo {
+public class ControlDisplayDemo {
   public static void main(String[] args) {
-    JFrame screen = new JFrame("Display Demo");
+    JFrame screen = new JFrame("Control/Display Demo");
     screen.setSize(640, 480);
     screen.setLayout(new GridLayout());
     screen.addWindowListener(new WindowAdapter() {

@@ -6,7 +6,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 
 
-public class MachineDemo {
+public class GuiAtmMachineDemo {
   public static void main(String[] args) {
     JFrame screen = new JFrame("ATM Machine Demo");
     screen.setSize(1024, 480);
