@@ -1,8 +1,10 @@
 # Bank-of-Saxby
 
-A simple, fake Banking System using Java with PostgreSQL.
+A simple, fake Banking System using Java with Swing and PostgreSQL.
 
-For some reason, when I first started this project I decided to use the [GNU GPL v2](https://github.com/saxbophone/Bank-of-Saxby/blob/master/LICENSE).
+This Software is Licensed under the [GNU GPL v2](https://github.com/saxbophone/Bank-of-Saxby/blob/master/LICENSE), a copy of which is kept in this repository.
+
+**For help with downloading, running and using this software please [see this document](HELP.md).**
 
 ## DISCLAIMER
 
