@@ -20,7 +20,7 @@ public class GuiAtmScreen extends JPanel implements Control, Display {
   private JLabel[] buttonMessage;
   private JPanel leftButtons;
   private JPanel rightButtons;
-  private ScreenLayout[] screens;
+  private ScreenLayout[] layouts;
   public GuiAtmScreen() {
     initGui();
   }
