@@ -52,7 +52,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>com.saxbophone.bankofsaxby.GuiAtmMachineDemo</mainClass>
+              <mainClass>com.saxbophone.bankofsaxby.ScreenLayoutDemo</mainClass>
             </manifest>
           </archive>
         </configuration>
