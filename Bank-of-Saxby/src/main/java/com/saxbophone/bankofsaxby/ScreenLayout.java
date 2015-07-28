@@ -10,21 +10,38 @@ public class ScreenLayout {
   private String message;
   private String[] buttonMessages;
 
-  public ScreenLayout(Display target) {
-    // Assign this ScreenLayout to the given Display
-    screen = target;
-  }
 
   public ScreenLayout(Display target,
                       String titleText,
                       String messageText,
-                      String[] buttonMessageText) {
+                      String[] buttonMessageText,
+                      int[] buttonScreenRedirect) {
+    // call the main constructor, then set target
+    this(
+      titleText,
+      messageText,
+      buttonMessageText,
+      buttonScreenRedirect
+    );
+    screen = target;
+  }
+
+  public ScreenLayout(String titleText,
+                      String messageText,
+                      String[] buttonMessageText,
+                      int[] buttonScreenRedirect) {
     // check that there are no more than 6 buttonMessages defined
     if(buttonMessageText.length > 6) {
-      throw new IllegalArgumentException("Length of array argument " +
-                                         "buttonMessageText cannot exceed 6.");
+      throw new IllegalArgumentException(
+        "Length of array argument " + "buttonMessageText cannot exceed 6."
+      );
     }
-    screen = target;
+    // Same for buttonScreenRedirect
+    if(buttonScreenRedirect.length > 6) {
+      throw new IllegalArgumentException(
+        "Length of array argument " + "buttonScreenRedirect cannot exceed 6."
+      );
+    }
     title = titleText;
     message = messageText;
     buttonMessages = new String[6];
@@ -45,5 +62,9 @@ public class ScreenLayout {
         screen.clearButtonMessage(i);
       }
     }
+  }
+
+  public void setDisplay(Display display) {
+    screen = display;
   }
 }

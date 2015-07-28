@@ -18,7 +18,6 @@ public class ScreenLayoutDemo {
     });
     GuiAtmScreen atm = new GuiAtmScreen();
     ScreenLayout layout = new ScreenLayout(
-        atm,
         "Ultra-Mega-Corp Ltd ATM Machine",
         "Please select an option below",
         new String[] {
@@ -28,7 +27,11 @@ public class ScreenLayoutDemo {
           "Go A.W.O.L.",
           "See a Doctor",
           "More Options"
+        },
+        new int[] {
+          0, 0, 0, 0, 0, 0
         });
+    atm.addLayout(layout);
     GuiPinpad pad = new GuiPinpad();
     screen.add(atm);
     screen.add(pad);

@@ -15,4 +15,6 @@ public interface Display {
   public void setButtonMessage(int button, String message);
   // clear the message of a numbered button
   public void clearButtonMessage(int button);
+  // add a given ScreenLayout to this Display
+  public void addLayout(ScreenLayout layout);
 }

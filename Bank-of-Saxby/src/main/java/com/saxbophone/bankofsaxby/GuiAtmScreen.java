@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.util.Arrays;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -20,7 +21,7 @@ public class GuiAtmScreen extends JPanel implements Control, Display {
   private JLabel[] buttonMessage;
   private JPanel leftButtons;
   private JPanel rightButtons;
-  private ScreenLayout[] layouts;
+  private ArrayList layouts;
   public GuiAtmScreen() {
     initGui();
   }
@@ -37,6 +38,7 @@ public class GuiAtmScreen extends JPanel implements Control, Display {
   };
 
   public void initGui() {
+    layouts = new ArrayList();
     setLayout(new BorderLayout());
     screen = new JPanel(new GridLayout(2, 1));
     dialogue = new JPanel(new GridLayout(2, 1));
@@ -100,5 +102,10 @@ public class GuiAtmScreen extends JPanel implements Control, Display {
 
   public void clearButtonMessage(int b) {
     buttonMessage[b].setText("");
+  }
+
+  public void addLayout(ScreenLayout layout) {
+    layouts.add(layout);
+    layout.setDisplay(this);
   }
 }
